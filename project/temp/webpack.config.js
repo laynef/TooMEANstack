@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 
   entry: {
-    'app': './public/main.ts',
+    'app': './app/main.ts',
     'polyfills': [
       'core-js/es6',
       'core-js/es7/reflect',
@@ -13,7 +13,7 @@ module.exports = {
     ]
   },
   output: {
-    path: './public',
+    path: './dist',
     filename: '[name].[hash].js'
   },
   module: {
@@ -21,7 +21,7 @@ module.exports = {
       {test: /\.component.ts$/, loader: 'ts!angular2-template'},
       {test: /\.ts$/, exclude: /\.component.ts$/, loader: 'ts'},
       {test: /\.html$/, loader: 'raw'},
-     {test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass')},
+      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass')},
       {test: /\.css$/, loader: 'raw'}
     ]
   },
@@ -33,9 +33,9 @@ module.exports = {
       name: 'polyfills'
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './app/index.html'
     }),
-    new ExtractTextPlugin('public/main.css', {
+    new ExtractTextPlugin('app/main.css', {
       allChunks: true
     }),
     new webpack.DefinePlugin({
