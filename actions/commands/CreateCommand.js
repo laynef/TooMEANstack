@@ -27,8 +27,8 @@ var CreateCommand = function(name) {
       "main": "index.js",
       "scripts": {
         "start": "nodemon ./server/server.js",
-        "build": "webpack --progress -w",
-        "pro": "webpack -p",
+        "watch": "webpack --progress -w",
+        "build": "webpack --progress -p",
         "postinstall": "typings install & webpack"
       },
       "keywords": [],

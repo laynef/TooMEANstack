@@ -1,6 +1,6 @@
 {
   "name": "too-mean-stack-cli",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An Angular 2 MEAN Stack Cli",
   "repository": {
     "type": "git",

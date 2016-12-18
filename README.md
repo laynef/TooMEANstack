@@ -1,11 +1,10 @@
-                _____          ___  ___ _____  ___   _   _ 
-                |_   _|         |  \/  ||  ___|/ _ \ | \ | |
-                | | ___   ___ | .  . || |__ / /_\ \|  \| |
-                | |/ _ \ / _ \| |\/| ||  __||  _  || . ` |
-                | | (_) | (_) | |  | || |___| | | || |\  |
-                \_/\___/ \___/\_|  |_/\____/\_| |_/\_| \_/
-                                                        
-                                
+           _____          ___  ___ _____  ___   _   _ 
+          |_   _|         |  \/  ||  ___|/ _ \ | \ | |
+            | | ___   ___ | .  . || |__ / /_\ \|  \| |
+            | |/ _ \ / _ \| |\/| ||  __||  _  || . ` |
+            | | (_) | (_) | |  | || |___| | | || |\  |
+            \_/\___/ \___/\_|  |_/\____/\_| |_/\_| \_/
+
 # Too-MEAN-Stack Cli (Angular 2)
 
 ## Installation
@@ -23,5 +22,6 @@
 `mean make <your-component-name-here>` <br>
 
 ## Extra Commands
+Use `npm start` to start the server <br />
 Use `npm run build` for webpack production  <br>
 Use `npm run watch` for webpack developing watch  <br>
