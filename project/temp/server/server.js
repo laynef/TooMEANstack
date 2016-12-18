@@ -17,7 +17,7 @@ server.listen(port, () => {
 
 // Middleware
 // Body Parser, Morgan, and Public Compiled folder
-app.use(express.static('public'))
+app.use(express.static('dist'))
 app.use(cors())
 app.use(morgan('dev'))
 app.use(parser.json())
