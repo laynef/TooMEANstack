@@ -1,6 +1,6 @@
 {
   "name": "too-mean-stack-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An Angular 2 MEAN Stack Cli",
   "repository": {
     "type": "git",
@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "jsonfile": "^2.4.0",
-    "meteor-node-stubs": "~0.2.0",
     "ncp": "^2.0.0"
   }
 }
