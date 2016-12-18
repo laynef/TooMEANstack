@@ -1,0 +1,25 @@
+{
+  "name": "too-mean-stack-cli",
+  "version": "0.0.1",
+  "description": "An Angular 2 MEAN Stack Cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laynefaler/RENS-Stack_Cli.git"
+  },
+  "keywords": [],
+  "author": "Layne Faler <laynefaler>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laynefaler/RENS-Stack_Cli/issues"
+  },
+  "homepage": "https://github.com/laynefaler/RENS-Stack_Cli#readme",
+  "preferGlobal": true,
+  "bin": {
+    "mean": "./actions/index.js"
+  },
+  "dependencies": {
+    "jsonfile": "^2.4.0",
+    "meteor-node-stubs": "~0.2.0",
+    "ncp": "^2.0.0"
+  }
+}
