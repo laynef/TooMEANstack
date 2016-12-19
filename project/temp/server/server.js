@@ -6,6 +6,8 @@ const parser = require('body-parser')
 const morgan = require('morgan')
 const routes = require('./routes')
 const cors = require('cors')
+const config = require('../config')
+const mongoose = require('mongoose')
 
 // port settings
 let port = process.env.PORT || 4200
@@ -21,6 +23,13 @@ app.use(express.static('dist'))
 app.use(cors())
 app.use(morgan('dev'))
 app.use(parser.json())
+
+// database connection
+mongoose.connect(config.database.mongo)
+const db = mongoose.connection
+db.once('open', () => {
+  console.log('connected to database')
+})
 
 // Render the index.html
 app.get('/', (req, res) => { res.sendFile('index.html') })
