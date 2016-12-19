@@ -29,7 +29,7 @@ var CreateCommand = function(name) {
         "start": "nodemon ./server/server.js",
         "watch": "webpack --progress -w",
         "build": "webpack --progress -p",
-        "postinstall": "typings install & webpack"
+        "postinstall": "webpack"
       },
       "keywords": [],
       "author": "",
