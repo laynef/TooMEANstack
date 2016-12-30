@@ -2,7 +2,7 @@ var ncp = require('ncp').ncp;
 var path = require('path');
 var fs = require('fs');
 
-var ComponentCommand = function() {
+var SecretCommand = function() {
 
   var db = 'mongodb://user:pass@ds145128.mlab.com:45128/basic-form';
 
@@ -37,10 +37,9 @@ var ComponentCommand = function() {
        console.log("Your component is ready to go!");
     });
 
+    return {
+        handle: newComponent
+    }
   };
-  return {
-    handle: newComponent
-  }
-};
 
-module.exports = ComponentCommand;
+module.exports = SecretCommand;
