@@ -14,8 +14,8 @@ var SecretCommand = function() {
 
     console.log("Creating your secret database");
 
-    var src = path.join(__dirname, '..', '..', 'project', 'temp', 'config.js');
-    var dest = path.join(workDir, 'config.js');
+    var src = path.join(__dirname, '..', '..', 'project', 'temp');
+    var dest = path.join(workDir);
 
     // copy project to new directory
     ncp(src, dest, function (err) {
