@@ -15,9 +15,7 @@ module.exports = {
   },
   output: {
     path: './dist',
-    filename: '[name].bundle.js',
-    sourceMapFilename: '[name].map',
-    chunkFilename: '[id].chunk.js'
+    filename: '[name].bundle.js'
   },
   module: {
     loaders: [
@@ -37,9 +35,6 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './app/index.html'
-    }),
-    new ExtractTextPlugin('app/main.css', {
-      allChunks: true
     }),
     new webpack.DefinePlugin({
       app: {

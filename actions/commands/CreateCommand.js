@@ -50,6 +50,7 @@ var CreateCommand = function(name) {
         "cors": "^2.8.1",
         "express": "^4.14.0",
         "extract-text-webpack-plugin": "^1.0.1",
+        "lodash": "^4.16.1",
         "mongoose": "^4.7.3",
         "morgan": "^1.7.0",
         "nodemon": "^1.11.0",
@@ -60,10 +61,13 @@ var CreateCommand = function(name) {
         "zone.js": "^0.7.2"
       },
       "devDependencies": {
+        "@types/node": "^6.0.42",
         "cross-env": "^3.1.3",
         "html-webpack-plugin": "^2.24.1",
         "raw-loader": "^0.5.1",
         "ts-loader": "^1.3.3",
+        "ts-node": "1.2.1",
+        "tslint": "^4.0.2",
         "typescript": "^2.1.4",
         "typings": "^2.0.0",
         "webpack": "^1.14.0",
