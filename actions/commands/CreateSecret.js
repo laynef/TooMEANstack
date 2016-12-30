@@ -2,13 +2,12 @@ var ncp = require('ncp').ncp;
 var path = require('path');
 var fs = require('fs');
 
-var ComponentCommand = function(name) {
+var ComponentCommand = function() {
 
   var db = 'mongodb://user:pass@ds145128.mlab.com:45128/basic-form';
 
   var newComponent = function() {
     var workDir = process.cwd();
-    if (name === undefined || name === '' || name === null) {
       console.log("Please name your component");
       throw new Error('mean component Name');
     }
