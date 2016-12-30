@@ -4,7 +4,7 @@ var fs = require('fs');
 
 var SecretCommand = function() {
 
-  var lower = 'mongodb://user:pass@ds145128.mlab.com:45128/basic-form';
+  var lower = '"mongodb://user:pass@ds145128.mlab.com:45128/basic-form"'; 
 
   var newComponent = function() {
     var workDir = process.cwd();
