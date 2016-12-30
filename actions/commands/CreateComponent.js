@@ -4,6 +4,7 @@ var fs = require('fs');
 
 var ComponentCommand = function(name) {
 
+  var lower = name.toLowerCase();
   var lowName = name.charAt(0).toUpperCase() + name.slice(1);
   var comName = lowName + 'Component'
 
@@ -20,13 +21,13 @@ var ComponentCommand = function(name) {
     var dest = path.join(workDir, 'app', 'components', name);
     
     var fileTSC = path.join(workDir, 'app', 'components', name, 'main.component.ts');
-    var newFileTSC = path.join(workDir, 'app', 'components', name, lowName + '.component.ts');
+    var newFileTSC = path.join(workDir, 'app', 'components', name, name + '.component.ts');
    
     var fileTSH = path.join(workDir, 'app', 'components', name, 'main.component.html');
-    var newFileTSH = path.join(workDir, 'app', 'components', name, lowName + '.component.html');    
+    var newFileTSH = path.join(workDir, 'app', 'components', name, name + '.component.html');    
    
     var fileCSS = path.join(workDir, 'app', 'components', name, 'main.component.css');
-    var newFileCSS = path.join(workDir, 'app', 'components', name, lowName + '.component.css');
+    var newFileCSS = path.join(workDir, 'app', 'components', name, name + '.component.css');
 
     // copy project to new directory
     ncp(src, dest, function (err) {
@@ -50,8 +51,8 @@ var ComponentCommand = function(name) {
        // rename Main in Component.jsx
        fs.readFile(newFileTSC, 'utf8', function (err,data) {
 
-        var result = data.replace(/main/ig, lowName);
-        var result = data.replace(/second/ig, comName);
+        var result = data.replace(/main/g, lower);
+        var result = data.replace(/second/g, comName);
 
         fs.writeFile(newFileTSC, result, 'utf8', function (err) {
           // null
