@@ -4,7 +4,8 @@ var fs = require('fs');
 
 var ComponentCommand = function(name) {
 
-  var lowName = name.toLowerCase();
+  var lowName = name.charAt(0).toUpperCase() + name.slice(1);
+  var comName = lowName + 'Component'
 
   var newComponent = function() {
     var workDir = process.cwd();
@@ -50,6 +51,7 @@ var ComponentCommand = function(name) {
        fs.readFile(newFileTSC, 'utf8', function (err,data) {
 
         var result = data.replace(/main/ig, lowName);
+        var result = data.replace(/second/ig, comName);
 
         fs.writeFile(newFileTSC, result, 'utf8', function (err) {
           // null

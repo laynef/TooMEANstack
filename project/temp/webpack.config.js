@@ -9,12 +9,15 @@ module.exports = {
     'polyfills': [
       'core-js/es6',
       'core-js/es7/reflect',
-      'zone.js/dist/zone'
+      'zone.js/dist/zone',
+      'zone.js/dist/long-stack-trace-zone'
     ]
   },
   output: {
     path: './dist',
-    filename: '[name].[hash].js'
+    filename: '[name].bundle.js',
+    sourceMapFilename: '[name].map',
+    chunkFilename: '[id].chunk.js'
   },
   module: {
     loaders: [
