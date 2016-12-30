@@ -34,7 +34,7 @@ var ComponentCommand = function(name) {
        if (err) {
          return console.error(err);
        }
-       console.log('Creating React Component ...');
+       console.log('Creating Angular 2 Component ...');
 
        fs.rename(fileTSH, newFileTSH, function(e) {
          
