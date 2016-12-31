@@ -51,13 +51,9 @@ var ComponentCommand = function(name) {
        // rename Main in Component.jsx
        fs.readFile(newFileTSC, 'utf8', function (err,data) {
 
-        var result = data.replace(/main/g, lower);
-        var result1 = data.replace(/second/g, comName);
+        var result = data.replace(/main/g, lower).replace(/second/g, comName);
 
         fs.writeFile(newFileTSC, result, 'utf8', function (err) {
-          // null
-        });
-        fs.writeFile(newFileTSC, result1, 'utf8', function (err) {
           // null
         });
       });
