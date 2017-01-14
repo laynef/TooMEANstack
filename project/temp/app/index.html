@@ -12,6 +12,7 @@
 
   <body>
     <root>Loading...</root>
-    
+    <script src="http://localhost:4200/socket.io/socket.io.js"></script>
+    <script>var socket = io.connect('http://localhost:4200');socket.on('save',(data) => {window.location.reload()});</script>
   </body>
 </html>

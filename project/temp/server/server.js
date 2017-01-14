@@ -8,6 +8,7 @@ const routes = require('./routes')
 const cors = require('cors')
 const config = require('../config')
 const mongoose = require('mongoose')
+const fs = require('fs')
 
 // port settings
 let port = process.env.PORT || 4200
@@ -32,16 +33,22 @@ db.once('open', () => {
 })
 
 // Render the index.html
-app.get('/', (req, res) => { res.sendFile('index.html') })
+app.get('/', (req, res) => { 
+    res.sendFile('index.html') 
+})
+
+app.get('*', (req, res) => {
+    res.redirect('/')
+})
 
 app.use('/api', routes) // when you add api routes in routes.js
 
 // Web socket on connection 
 io.on('connection', (socket) => {
-    io.emit('this', { will: 'be received by everyone' })
-
-    // disconnect the websocket when user leaves
-    socket.on('disconnect',  () => {
-        io.emit('user disconnected')
-    })
-})
+    setTimeout(() => {
+        fs.watch(__dirname + '/../', {recursive: true}, (e, o) => {
+            if (e === 'rename' || e === 'change') {
+                socket.emit('save')
+            }
+        })
+    }, 1000)
